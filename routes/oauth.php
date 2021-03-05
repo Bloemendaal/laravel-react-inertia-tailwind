@@ -10,7 +10,8 @@ Route::post('/device-authorize', [DeviceAuthorizationController::class, 'authori
 Route::middleware(['web', 'auth'])->group(function () {
     Route::get('/device-tokens', [DeviceAccessTokenController::class, 'forUser']);
 
-    Route::get('/device-request', [DeviceAccessTokenController::class, 'request']);
+    Route::post('/device-request', [DeviceAccessTokenController::class, 'request'])
+        ->middleware(['throttle:5,10']);
 
     Route::post('/device-tokens', [DeviceAccessTokenController::class, 'store']);
 

@@ -11,22 +11,22 @@ class DeviceCode extends Model
     /**
      * The database table used by the model.
      */
-    protected string $table = 'oauth_device_codes';
+    protected $table = 'oauth_device_codes';
 
     /**
      * Indicates if the IDs are auto-incrementing.
      */
-    public bool $incrementing = false;
+    public $incrementing = false;
 
     /**
      * The guarded attributes on the model.
      */
-    protected array $guarded = [];
+    protected $guarded = [];
 
     /**
      * The attributes that should be cast to native types.
      */
-    protected array $casts = [
+    protected $casts = [
         'scopes' => 'array',
         'revoked' => 'bool',
     ];
@@ -34,7 +34,7 @@ class DeviceCode extends Model
     /**
      * The attributes that should be mutated to dates.
      */
-    protected array $dates = [
+    protected $dates = [
         'last_polled_at',
         'expires_at',
     ];
@@ -56,7 +56,7 @@ class DeviceCode extends Model
     /**
      * The "type" of the primary key ID.
      */
-    protected string $keyType = 'string';
+    protected $keyType = 'string';
 
     /**
      * Get the client that owns the authentication code.
