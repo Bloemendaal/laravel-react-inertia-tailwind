@@ -1965,11 +1965,11 @@ function (_super) {
     _this.activateToken = function () {
       var _a;
 
-      var data = new FormData();
-      data.append('user_code', _this.state.form.user_code);
       fetch('/oauth/device-tokens', {
         method: 'POST',
-        body: data,
+        body: new URLSearchParams({
+          'user_code': _this.state.form.user_code
+        }),
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/x-www-form-urlencoded',

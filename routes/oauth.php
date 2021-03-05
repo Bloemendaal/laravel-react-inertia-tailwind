@@ -10,10 +10,10 @@ Route::post('/device-authorize', [DeviceAuthorizationController::class, 'authori
 Route::middleware(['web', 'auth'])->group(function () {
     Route::get('/device-tokens', [DeviceAccessTokenController::class, 'forUser']);
 
-    Route::post('/device-request', [DeviceAccessTokenController::class, 'request'])
-        ->middleware(['throttle:5,10']);
-
     Route::post('/device-tokens', [DeviceAccessTokenController::class, 'store']);
 
     Route::delete('/device-tokens/{token_id}', [DeviceAccessTokenController::class, 'destroy']);
+
+    Route::post('/device-request', [DeviceAccessTokenController::class, 'request'])
+        ->middleware(['throttle:5,10']);
 });

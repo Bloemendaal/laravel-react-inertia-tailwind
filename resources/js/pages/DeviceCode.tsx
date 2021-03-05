@@ -67,12 +67,11 @@ class DeviceCode extends React.Component<DeviceCodeProps, DeviceCodeState> {
     }
 
     activateToken = (): void => {
-        const data = new FormData();
-        data.append('user_code', this.state.form.user_code);
-
         fetch('/oauth/device-tokens', {
             method: 'POST',
-            body: data,
+            body: new URLSearchParams({
+                'user_code': this.state.form.user_code
+            }),
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/x-www-form-urlencoded',

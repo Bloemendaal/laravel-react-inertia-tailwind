@@ -35,7 +35,7 @@ class DeviceAccessTokenController
             ->first();
 
         return $deviceCode ?? response()->json([
-            'message' => __('User code has expired or is invalid please try again.')
+            'message' => __('User code has expired or is invalid. Please try again.')
         ], 404);
     }
 
@@ -62,7 +62,7 @@ class DeviceAccessTokenController
         ];
 
         $errors = [
-            'user_code.exists' => 'This code do not exist please try again.',
+            'user_code.exists' => 'This code does not exist. Please try again.',
         ];
 
         $this->validation->make($request->all(), $validate, $errors)->validate();
