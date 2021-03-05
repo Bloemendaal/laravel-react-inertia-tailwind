@@ -18,10 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/authorize', function () {
+    return view('authorize');
+});
+
 Route::get('home', function () {
     return Inertia::render('Home');
 });
 
 Route::get('test', function () {
     return Inertia::render('Test');
+});
+
+Route::get('device', function () {
+    return Inertia::render('DeviceCode');
 });
