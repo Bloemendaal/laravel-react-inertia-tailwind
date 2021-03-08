@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/authorize', function () {
-    return view('authorize');
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::get('home', function () {
     return Inertia::render('Home');
@@ -33,3 +33,5 @@ Route::get('test', function () {
 Route::get('device', function () {
     return Inertia::render('DeviceCode');
 });
+
+require('auth.php');
