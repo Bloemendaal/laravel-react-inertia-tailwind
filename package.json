@@ -12,8 +12,13 @@
     "devDependencies": {
         "@babel/preset-react": "^7.12.13",
         "@types/react-dom": "^17.0.1",
+        "@typescript-eslint/eslint-plugin": "^4.17.0",
+        "@typescript-eslint/parser": "^4.17.0",
         "autoprefixer": "^10.2.4",
-        "axios": "^0.21",
+        "axios": "^0.21.1",
+        "eslint": "^7.21.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-react": "^7.22.0",
         "laravel-mix": "^6.0.11",
         "lodash": "^4.17.19",
         "postcss": "^8.2.6",
@@ -24,9 +29,11 @@
     "dependencies": {
         "@inertiajs/inertia": "^0.8.4",
         "@inertiajs/inertia-react": "^0.5.3",
+        "@tailwindcss/forms": "^0.2.1",
         "@tailwindcss/postcss7-compat": "^2.0.3",
         "@types/react": "^17.0.2",
         "react": "^17.0.1",
-        "react-dom": "^17.0.1"
+        "react-dom": "^17.0.1",
+        "react-pin-field": "^1.0.6"
     }
 }
