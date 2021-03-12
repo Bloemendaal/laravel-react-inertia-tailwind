@@ -1918,18 +1918,7 @@ var Connect_1 = __importDefault(__webpack_require__(/*! ../components/Activate/C
 var Name_1 = __importDefault(__webpack_require__(/*! ../components/Activate/Name */ "./resources/js/components/Activate/Name/index.tsx"));
 
 var Activate = function Activate() {
-  var _a = React.useState({
-    client_id: 1,
-    expires_at: 'string',
-    id: 'string',
-    info: 'string',
-    last_polled_at: 'string',
-    retry_interval: 1,
-    revoked: false,
-    scopes: [],
-    user_code: 'string',
-    user_id: 1
-  }),
+  var _a = React.useState(),
       token = _a[0],
       setToken = _a[1];
 

@@ -4,18 +4,20 @@ import ActivateName from '../components/Activate/Name';
 import { ActivateResponse } from '../models/Activate';
 
 const Activate: React.FunctionComponent = () => {
-    const [token, setToken] = React.useState<ActivateResponse>({
-        client_id: 1,
-        expires_at: 'string',
-        id: 'string',
-        info: 'string',
-        last_polled_at: 'string',
-        retry_interval: 1,
-        revoked: false,
-        scopes: [],
-        user_code: 'string',
-        user_id: 1,
-    });
+    const [token, setToken] = React.useState<ActivateResponse>(
+        // {
+        //     client_id: 1,
+        //     expires_at: 'string',
+        //     id: 'string',
+        //     info: 'string',
+        //     last_polled_at: 'string',
+        //     retry_interval: 1,
+        //     revoked: false,
+        //     scopes: [],
+        //     user_code: 'string',
+        //     user_id: 1,
+        // }
+    );
 
     return (
         <div className="min-h-screen bg-gray-100">

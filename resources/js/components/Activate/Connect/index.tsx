@@ -48,6 +48,7 @@ const ActivateConnect: React.FunctionComponent<ActivateConnectProps> = ({ onComp
             return;
         }
 
+        setError('');
         setSubmitting(true);
 
         axios({
