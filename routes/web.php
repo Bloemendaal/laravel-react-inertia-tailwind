@@ -30,9 +30,9 @@ Route::get('test', function () {
     return Inertia::render('Test');
 });
 
-Route::get('device', function () {
-    return Inertia::render('DeviceCode');
-});
+Route::get('activate', function () {
+    return Inertia::render('Activate');
+})->middleware(['auth']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

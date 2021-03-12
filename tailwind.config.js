@@ -5,10 +5,23 @@ module.exports = {
     ],
     darkMode: 'media',
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'kelly-green': '#00AA65',
+                'cheerful-green':'#76CC2B',
+                'horizon-gray':'#F2F2F2',
+                'midnight-gray':'#080D14',
+            },
+        },
     },
     variants: {
-        extend: {},
+        extend: {
+            backgroundColor: ['disabled'],
+            cursor: ['disabled'],
+            textColor: ['disabled'],
+        },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 }
