@@ -96,7 +96,8 @@ const ActivateConnect: React.FunctionComponent<ActivateConnectProps> = ({ onComp
                 <div className="w-full sm:w-auto flex mt-4 sm:mt-0">
                     <Button
                         type="submit"
-                        disabled={ userCode.length < CodeLength || submitting }
+                        disabled={ userCode.length < CodeLength }
+                        submitting={ submitting && 'Laden...' }
                         className="ml-auto"
                     >
                         Toevoegen

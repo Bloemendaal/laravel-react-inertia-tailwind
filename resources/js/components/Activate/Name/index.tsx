@@ -12,6 +12,7 @@ const ActivateName: React.FunctionComponent<ActivateNameProps> = ({ onComplete }
     const [selectedScreen, setSelectedScreen] = React.useState<Screen>();
 
     const get = () => {
+        // TODO fix get method
         setScreens([
             {
                 id: 1,
@@ -44,7 +45,7 @@ const ActivateName: React.FunctionComponent<ActivateNameProps> = ({ onComplete }
         setTimeout(() => {
             setSubmitting(false);
             onComplete && onComplete(selectedScreen);
-        }, 1000);
+        }, 3000);
     };
 
     React.useEffect(() => {
@@ -90,7 +91,7 @@ const ActivateName: React.FunctionComponent<ActivateNameProps> = ({ onComplete }
                 }
             </div>
             <div className="flex mt-4">
-                <Button className="ml-auto" disabled={ !selectedScreen || submitting } onClick={ submit }>Bevestigen</Button>
+                <Button className="ml-auto" disabled={ !selectedScreen } submitting={ submitting && 'Laden...' } onClick={ submit }>Bevestigen</Button>
             </div>
         </>
     );
