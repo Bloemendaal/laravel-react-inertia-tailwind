@@ -1,0 +1,124 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "ignorePatterns": [
+        "public",
+        "node_modules"
+    ],
+    "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "version": "detect",
+            "flowVersion": "0.53"
+        }
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "jsx/no-undef": "off",
+        "react/jsx-fragments": [
+            "error",
+            "syntax"
+        ],
+        "react/jsx-curly-spacing": [
+            "error",
+            {
+                "when": "always",
+                "children": true,
+                "spacing": {
+                    "objectLiterals": "never"
+                }
+            }
+        ],
+        "react/jsx-filename-extension": [
+            "error",
+            {
+                "extensions": [
+                    ".js",
+                    ".tsx"
+                ]
+            }
+        ],
+        "react/jsx-max-depth": [
+            "error",
+            {
+                "max": 8
+            }
+        ],
+        "react/jsx-no-duplicate-props": "error",
+        "react/jsx-props-no-multi-spaces": "error",
+        "react/jsx-no-target-blank": "off",
+        "react/jsx-no-useless-fragment": "off",
+        "react/jsx-tag-spacing": [
+            "error",
+            {
+                "beforeSelfClosing": "always"
+            }
+        ],
+        "react/no-access-state-in-setstate": "error",
+        "react/no-children-prop": "error",
+        "react/no-deprecated": "error",
+        "react/no-direct-mutation-state": "error",
+        "react/no-multi-comp": [
+            "error",
+            {
+                "ignoreStateless": true
+            }
+        ],
+        "react/no-redundant-should-component-update": "error",
+        "react/no-this-in-sfc": "error",
+        "react/no-typos": "error",
+        "react/no-unknown-property": "error",
+        "react/no-unsafe": "error",
+        "react/no-unused-state": "error",
+        "react/prop-types": "off",
+        "react/self-closing-comp": [
+            "error",
+            {
+                "component": true,
+                "html": false
+            }
+        ],
+        "react/sort-comp": "off"
+    }
+}

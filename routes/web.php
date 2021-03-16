@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/authorize', function () {
+    return view('authorize');
+});
+
 Route::get('home', function () {
     return Inertia::render('Home');
 });
@@ -25,3 +29,13 @@ Route::get('home', function () {
 Route::get('test', function () {
     return Inertia::render('Test');
 });
+
+Route::get('activate', function () {
+    return Inertia::render('Activate');
+})->middleware(['auth']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
