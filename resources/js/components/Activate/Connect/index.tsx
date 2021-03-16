@@ -79,9 +79,9 @@ const ActivateConnect: React.FunctionComponent<ActivateConnectProps> = ({ onComp
                 <PinField
                     length={ 8 }
                     ref={ pinField }
-                    validate={ AllowedCodeChars }
                     disabled={ submitting }
                     onChange={ setUserCode }
+                    validate={ AllowedCodeChars }
                     className="uppercase px-0.5 shadow-sm focus:ring-kelly-green focus:border-kelly-green block text-3xl border-gray-300 rounded-md text-center w-full sm:w-16 transition-transform transform scale-100 focus:scale-105" />
             </div>
             <div className="w-full sm:flex mt-4">
